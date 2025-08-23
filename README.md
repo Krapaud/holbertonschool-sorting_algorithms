@@ -1,122 +1,123 @@
-# 📊 Algorithmes de Tri
+````markdown
+# 📊 Sorting Algorithms
 
-Ce projet implémente plusieurs algorithmes de tri classiques en langage C, dans le cadre du cursus Holberton School.
+This project implements several classic sorting algorithms in C language, as part of the Holberton School curriculum.
 
 ## 📋 Description
 
-Ce projet explore l'implémentation et l'analyse de la complexité temporelle de différents algorithmes de tri :
-- **Tri à bulles (Bubble Sort)**
-- **Tri par insertion (Insertion Sort)**
-- **Tri par sélection (Selection Sort)**
-- **Tri rapide (Quick Sort)**
+This project explores the implementation and time complexity analysis of different sorting algorithms:
+- **Bubble Sort**
+- **Insertion Sort**
+- **Selection Sort**
+- **Quick Sort**
 
-Chaque algorithme est accompagné d'une analyse de sa complexité temporelle dans les meilleurs, moyens et pires cas.
+Each algorithm is accompanied by an analysis of its time complexity in best, average, and worst cases.
 
-## 🗂️ Structure du Projet
+## 🗂️ Project Structure
 
 ```
 holbertonschool-sorting_algorithms/
 │
-├── sort.h                      # Fichier d'en-tête principal
-├── print_array.c              # Fonction pour afficher les tableaux
-├── print_list.c               # Fonction pour afficher les listes
+├── sort.h                      # Main header file
+├── print_array.c              # Function to display arrays
+├── print_list.c               # Function to display lists
 │
-├── 0-bubble_sort.c            # Implémentation du tri à bulles
-├── 0-O                        # Complexité temporelle du tri à bulles
-├── 0-main.c                   # Test du tri à bulles
+├── 0-bubble_sort.c            # Bubble sort implementation
+├── 0-O                        # Bubble sort time complexity
+├── 0-main.c                   # Bubble sort test
 │
-├── 1-insertion_sort_list.c    # Implémentation du tri par insertion
-├── 1-O                        # Complexité temporelle du tri par insertion
-├── 1-main.c                   # Test du tri par insertion
+├── 1-insertion_sort_list.c    # Insertion sort implementation
+├── 1-O                        # Insertion sort time complexity
+├── 1-main.c                   # Insertion sort test
 │
-├── 2-selection_sort.c         # Implémentation du tri par sélection
-├── 2-O                        # Complexité temporelle du tri par sélection
-├── 2-main.c                   # Test du tri par sélection
+├── 2-selection_sort.c         # Selection sort implementation
+├── 2-O                        # Selection sort time complexity
+├── 2-main.c                   # Selection sort test
 │
-├── 3-quick_sort.c             # Implémentation du tri rapide
-├── 3-O                        # Complexité temporelle du tri rapide
-├── 3-main.c                   # Test du tri rapide
+├── 3-quick_sort.c             # Quick sort implementation
+├── 3-O                        # Quick sort time complexity
+├── 3-main.c                   # Quick sort test
 │
-└── README.md                  # Ce fichier
+└── README.md                  # This file
 ```
 
-## 🛠️ Compilation et Exécution
+## 🛠️ Compilation and Execution
 
-### Prérequis
-- Compilateur GCC
-- Système Linux/Unix
+### Prerequisites
+- GCC compiler
+- Linux/Unix system
 
 ### Compilation
 ```bash
-# Tri à bulles
+# Bubble sort
 gcc -Wall -Wextra -Werror -pedantic 0-bubble_sort.c 0-main.c print_array.c -o bubble
 
-# Tri par insertion
+# Insertion sort
 gcc -Wall -Wextra -Werror -pedantic 1-insertion_sort_list.c 1-main.c print_list.c -o insertion
 
-# Tri par sélection
+# Selection sort
 gcc -Wall -Wextra -Werror -pedantic 2-selection_sort.c 2-main.c print_array.c -o select
 
-# Tri rapide
+# Quick sort
 gcc -Wall -Wextra -Werror -pedantic -std=gnu89 3-quick_sort.c 3-main.c print_array.c -o quick
 ```
 
-### Exécution
+### Execution
 ```bash
-./bubble      # Exécuter le tri à bulles
-./insertion   # Exécuter le tri par insertion
-./select      # Exécuter le tri par sélection
-./quick       # Exécuter le tri rapide
+./bubble      # Run bubble sort
+./insertion   # Run insertion sort
+./select      # Run selection sort
+./quick       # Run quick sort
 ```
 
-## 📊 Algorithmes Implémentés
+## 📊 Implemented Algorithms
 
-### 1. Tri à Bulles (Bubble Sort)
-**Fichiers :** `0-bubble_sort.c`, `0-O`
+### 1. Bubble Sort
+**Files:** `0-bubble_sort.c`, `0-O`
 
-Le tri à bulles compare les éléments adjacents et les échange s'ils sont dans le mauvais ordre. Ce processus est répété jusqu'à ce que le tableau soit trié.
+Bubble sort compares adjacent elements and swaps them if they are in the wrong order. This process is repeated until the array is sorted.
 
-**Complexité temporelle :**
-- Meilleur cas : O(n)
-- Cas moyen : O(n²)
-- Pire cas : O(n²)
+**Time Complexity:**
+- Best case: O(n)
+- Average case: O(n²)
+- Worst case: O(n²)
 
-### 2. Tri par Insertion (Insertion Sort)
-**Fichiers :** `1-insertion_sort_list.c`, `1-O`
+### 2. Insertion Sort
+**Files:** `1-insertion_sort_list.c`, `1-O`
 
-Le tri par insertion construit le tableau final trié un élément à la fois. Il est efficace pour de petites quantités de données. Dans ce projet, il est implémenté sur une liste doublement chaînée.
+Insertion sort builds the final sorted array one element at a time. It is efficient for small data sets. In this project, it is implemented on a doubly linked list.
 
-**Complexité temporelle :**
-- Meilleur cas : O(n)
-- Cas moyen : O(n²)
-- Pire cas : O(n²)
+**Time Complexity:**
+- Best case: O(n)
+- Average case: O(n²)
+- Worst case: O(n²)
 
-### 3. Tri par Sélection (Selection Sort)
-**Fichiers :** `2-selection_sort.c`, `2-O`
+### 3. Selection Sort
+**Files:** `2-selection_sort.c`, `2-O`
 
-Le tri par sélection divise la liste en deux parties : triée et non triée. Il sélectionne répétitivement le plus petit élément de la partie non triée.
+Selection sort divides the list into two parts: sorted and unsorted. It repeatedly selects the smallest element from the unsorted part.
 
-**Complexité temporelle :**
-- Meilleur cas : O(n²)
-- Cas moyen : O(n²)
-- Pire cas : O(n²)
+**Time Complexity:**
+- Best case: O(n²)
+- Average case: O(n²)
+- Worst case: O(n²)
 
-### 4. Tri Rapide (Quick Sort)
-**Fichiers :** `3-quick_sort.c`, `3-O`
+### 4. Quick Sort
+**Files:** `3-quick_sort.c`, `3-O`
 
-Le tri rapide utilise la stratégie "diviser pour régner" avec le schéma de partition de Lomuto. Le pivot est toujours le dernier élément de la partition.
+Quick sort uses the "divide and conquer" strategy with the Lomuto partition scheme. The pivot is always the last element of the partition.
 
-**Complexité temporelle :**
-- Meilleur cas : O(n log n)
-- Cas moyen : O(n log n)
-- Pire cas : O(n²)
+**Time Complexity:**
+- Best case: O(n log n)
+- Average case: O(n log n)
+- Worst case: O(n²)
 
-## 🔧 Structures de Données
+## 🔧 Data Structures
 
-### Tableau d'Entiers
-Utilisé pour les tris à bulles, par sélection et rapide.
+### Integer Array
+Used for bubble sort, selection sort, and quick sort.
 
-### Liste Doublement Chaînée
+### Doubly Linked List
 ```c
 typedef struct listint_s
 {
@@ -125,83 +126,83 @@ typedef struct listint_s
     struct listint_s *next;
 } listint_t;
 ```
-Utilisée pour le tri par insertion. Les nœuds ne peuvent pas être modifiés (valeur `n` constante), seuls les liens entre nœuds peuvent être changés.
+Used for insertion sort. Nodes cannot be modified (constant `n` value), only links between nodes can be changed.
 
-## 📝 Fonctions Utilitaires
+## 📝 Utility Functions
 
 ### `print_array`
-Affiche un tableau d'entiers.
+Displays an integer array.
 ```c
 void print_array(const int *array, size_t size);
 ```
 
 ### `print_list`
-Affiche une liste doublement chaînée d'entiers.
+Displays a doubly linked list of integers.
 ```c
 void print_list(const listint_t *list);
 ```
 
-## 🎯 Objectifs d'Apprentissage
+## 🎯 Learning Objectives
 
-- Comprendre le fonctionnement des algorithmes de tri classiques
-- Analyser la complexité temporelle et spatiale
-- Implémenter des algorithmes efficaces en C
-- Travailler avec différentes structures de données
-- Respecter les normes de codage et les contraintes du projet
+- Understand how classic sorting algorithms work
+- Analyze time and space complexity
+- Implement efficient algorithms in C
+- Work with different data structures
+- Respect coding standards and project constraints
 
-## 📚 Notation Big O
+## 📚 Big O Notation
 
-Les fichiers `*-O` contiennent les notations Big O pour chaque algorithme :
-- **O(1)** : Temps constant
-- **O(n)** : Temps linéaire
-- **O(n²)** : Temps quadratique
-- **O(log n)** : Temps logarithmique
-- **O(n log n)** : Temps quasi-linéaire
+The `*-O` files contain Big O notations for each algorithm:
+- **O(1)**: Constant time
+- **O(n)**: Linear time
+- **O(n²)**: Quadratic time
+- **O(log n)**: Logarithmic time
+- **O(n log n)**: Quasi-linear time
 
-### Format des fichiers de complexité :
-Chaque fichier `*-O` contient 3 lignes :
-1. Complexité dans le meilleur cas
-2. Complexité dans le cas moyen
-3. Complexité dans le pire cas
+### Complexity file format:
+Each `*-O` file contains 3 lines:
+1. Best case complexity
+2. Average case complexity
+3. Worst case complexity
 
 ## ✅ Tests
 
-Chaque algorithme est accompagné d'un fichier de test (`*-main.c`) qui :
-- Initialise un tableau de test avec les valeurs : `{19, 48, 99, 71, 13, 52, 96, 73, 86, 7}`
-- Affiche l'état initial du tableau/liste
-- Exécute l'algorithme de tri
-- Affiche chaque étape de tri (après chaque échange)
-- Affiche le résultat final trié
+Each algorithm is accompanied by a test file (`*-main.c`) that:
+- Initializes a test array with values: `{19, 48, 99, 71, 13, 52, 96, 73, 86, 7}`
+- Displays the initial state of the array/list
+- Executes the sorting algorithm
+- Displays each sorting step (after each swap)
+- Displays the final sorted result
 
-### Exemple de sortie attendue :
+### Expected output example:
 ```
 19, 48, 99, 71, 13, 52, 96, 73, 86, 7
 
-[étapes de tri avec affichage après chaque échange]
+[sorting steps with display after each swap]
 
 7, 13, 19, 48, 52, 71, 73, 86, 96, 99
 ```
 
-## 🔍 Spécifications Techniques
+## 🔍 Technical Specifications
 
-### Contraintes du projet :
-- Utilisation du compilateur GCC avec les flags `-Wall -Wextra -Werror -pedantic`
-- Respect du style de codage Betty
-- Pas plus de 5 fonctions par fichier
-- Variables déclarées en début de bloc
-- Affichage obligatoire après chaque échange d'éléments
+### Project constraints:
+- Use GCC compiler with flags `-Wall -Wextra -Werror -pedantic`
+- Respect Betty coding style
+- Maximum 5 functions per file
+- Variables declared at the beginning of blocks
+- Mandatory display after each element swap
 
-### Fonctions interdites :
-- Aucune fonction de la bibliothèque standard sauf `printf`, `malloc`, `free`
+### Forbidden functions:
+- No standard library functions except `printf`, `malloc`, `free`
 
-## 🧪 Test avec de gros datasets
+## 🧪 Testing with Large Datasets
 
-Pour tester les algorithmes avec de grandes quantités de données aléatoires, vous pouvez utiliser [Random.org](https://www.random.org/) pour générer des ensembles de nombres.
+To test algorithms with large amounts of random data, you can use [Random.org](https://www.random.org/) to generate number sets.
 
-## 👨‍💻 Auteur
+## 👨‍💻 Author
 
-Projet développé dans le cadre du programme Holberton School.
+Project developed as part of the Holberton School program.
 
-## 📄 Licence
+## 📄 License
 
-Ce projet est à des fins éducatives uniquement.
+This project is for educational purposes only.
